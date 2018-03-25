@@ -31,11 +31,26 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    flavorDimensions 'default'
+
+    productFlavors {
+        free {
+            dimension 'default'
+            applicationId "com.udacity.gradle.builditbigger.free"
+        }
+        paid {
+            dimension 'default'
+            applicationId "com.udacity.gradle.builditbigger.paid"
+        }
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     endpointsServer project(path: ':backend', configuration: 'endpoints')
+    compile project(":jokeactivity")
+    compile project(":JokesLibrary")
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.google.android.gms:play-services-ads:11.8.0'
     implementation 'com.google.api-client:google-api-client:1.23.0'
@@ -47,4 +62,5 @@ dependencies {
     })
 
     testImplementation 'junit:junit:4.12'
+    testCompile "org.mockito:mockito-core:1.9.5"
 }
