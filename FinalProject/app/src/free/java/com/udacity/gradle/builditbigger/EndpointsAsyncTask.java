@@ -6,6 +6,9 @@ import android.os.AsyncTask;
 import android.util.Pair;
 
 import com.example.jokeactivity.JokeActivity;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
 import com.udacity.gradle.builditbigger.backend.myApi.MyApi;
@@ -23,11 +26,14 @@ class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, String> 
     private static MyApi myApiService = null;
     private Context context;
     private String mResult;
+    private InterstitialAd mInterstitialAd;
 
 
     public EndpointsAsyncTask(Context context) {
         this.context = context;
-        //this.mProgressBar = progressBar;
+
+        mInterstitialAd = new InterstitialAd(context);
+        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
     }
 
     @Override
@@ -49,7 +55,23 @@ class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, String> 
     @Override
     protected void onPostExecute(String result) {
         mResult = result;
-        startJokeActivity();
+
+        mInterstitialAd.setAdListener(new AdListener() {
+
+            @Override
+            public void onAdLoaded() {
+                super.onAdLoaded();
+                mInterstitialAd.show();
+            }
+
+            @Override
+            public void onAdClosed() {
+                startJokeActivity();
+            }
+        });
+
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
+
     }
 
     private void startJokeActivity() {

@@ -27,7 +27,6 @@ class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, String> 
 
     public EndpointsAsyncTask(Context context) {
         this.context = context;
-        //this.mProgressBar = progressBar;
     }
 
     @Override

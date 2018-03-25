@@ -19,8 +19,7 @@ public class MyEndpoint {
     /** A simple endpoint method that takes a name and says Hi back */
     @ApiMethod(name = "putJoke")
     public JokeBean putJoke(JokeBean joke) {
-//        JokeBean response = new JokeBean();
-//        response.setJoke("Hi, " + name);
+
         return joke;
     }
 }
