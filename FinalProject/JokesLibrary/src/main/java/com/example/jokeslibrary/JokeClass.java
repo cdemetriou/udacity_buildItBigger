@@ -17,7 +17,7 @@ public class JokeClass {
         random = new Random();
     }
 
-    public String getRandomJoke() {
+    public String getJoke() {
         return jokes[random.nextInt(jokes.length)];
     }
 

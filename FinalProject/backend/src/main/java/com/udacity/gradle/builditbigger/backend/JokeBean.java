@@ -5,14 +5,14 @@ import com.example.jokeslibrary.JokeClass;
 /** The object model for the data we are sending through endpoints */
 public class JokeBean {
 
-    private JokeClass jokeTelling;
+    private JokeClass jokes;
 
     public JokeBean() {
-        jokeTelling = new JokeClass();
+        jokes = new JokeClass();
     }
 
     public String getJoke() {
-        return jokeTelling.getRandomJoke();
+        return jokes.getJoke();
     }
 
 }

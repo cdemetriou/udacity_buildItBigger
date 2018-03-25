@@ -1,35 +1,21 @@
 Warning: Google App Engine Java 7 runtime is deprecated.
 Warning: See https://cloud.google.com/appengine/docs/deprecations/java7
-Mar 25, 2018 10:08:39 PM com.google.appengine.tools.development.SystemPropertiesManager setSystemProperties
+Mar 25, 2018 10:27:42 PM com.google.appengine.tools.development.SystemPropertiesManager setSystemProperties
 INFO: Overwriting system property key 'java.util.logging.config.file', value 'C:\Users\Christos\AppData\Local\Google\Cloud SDK\google-cloud-sdk\platform\google_appengine\google\appengine\tools\java\config\sdk\logging.properties' with value 'WEB-INF/logging.properties' from 'C:\Users\Christos\Desktop\udacity_builditbigger\FinalProject\backend\build\exploded-backend\WEB-INF\appengine-web.xml'
-Mar 25, 2018 10:08:39 PM com.google.apphosting.utils.jetty.JettyLogger info
+Mar 25, 2018 10:27:42 PM com.google.apphosting.utils.jetty.JettyLogger info
 INFO: Logging to JettyLogger(null) via com.google.apphosting.utils.jetty.JettyLogger
-Mar 25, 2018 9:08:39 PM com.google.appengine.tools.development.IsolatedAppClassLoader checkWorkingDirectory
+Mar 25, 2018 9:27:43 PM com.google.appengine.tools.development.IsolatedAppClassLoader checkWorkingDirectory
 WARNING: Your working directory, (C:\Users\Christos\Desktop\udacity_builditbigger\FinalProject) is not equal to your 
 web application root (C:\Users\Christos\Desktop\udacity_builditbigger\FinalProject\backend\build\exploded-backend)
 You will not be able to access files from your working directory on the production server.
 
-Mar 25, 2018 9:08:39 PM com.google.apphosting.utils.jetty.JettyLogger info
+Mar 25, 2018 9:27:43 PM com.google.apphosting.utils.jetty.JettyLogger info
 INFO: jetty-6.1.x
-Mar 25, 2018 9:08:40 PM com.google.apphosting.utils.jetty.JettyLogger info
+Mar 25, 2018 9:27:44 PM com.google.apphosting.utils.jetty.JettyLogger info
 INFO: Started SelectChannelConnector@localhost:8080
-Mar 25, 2018 9:08:40 PM com.google.appengine.tools.development.AbstractModule startup
+Mar 25, 2018 9:27:44 PM com.google.appengine.tools.development.AbstractModule startup
 INFO: Module instance default is running at http://localhost:8080/
-Mar 25, 2018 9:08:40 PM com.google.appengine.tools.development.AbstractModule startup
+Mar 25, 2018 9:27:44 PM com.google.appengine.tools.development.AbstractModule startup
 INFO: The admin console is running at http://localhost:8080/_ah/admin
-Mar 25, 2018 10:08:40 PM com.google.appengine.tools.development.DevAppServerImpl doStart
+Mar 25, 2018 10:27:44 PM com.google.appengine.tools.development.DevAppServerImpl doStart
 INFO: Dev App Server is now running
-Mar 25, 2018 10:13:00 PM com.google.appengine.tools.development.JettyContainerService$ScannerListener fileChanged
-INFO: C:\Users\Christos\Desktop\udacity_builditbigger\FinalProject\backend\build\exploded-backend\WEB-INF\appengine-web.xml updated, reloading the webapp!
-Mar 25, 2018 10:13:00 PM com.google.appengine.tools.development.SystemPropertiesManager setSystemProperties
-INFO: Overwriting system property key 'java.util.logging.config.file', value 'C:\Users\Christos\AppData\Local\Google\Cloud SDK\google-cloud-sdk\platform\google_appengine\google\appengine\tools\java\config\sdk\logging.properties' with value 'WEB-INF/logging.properties' from 'C:\Users\Christos\Desktop\udacity_builditbigger\FinalProject\backend\build\exploded-backend\WEB-INF\appengine-web.xml'
-Mar 25, 2018 10:13:01 PM com.google.appengine.tools.development.IsolatedAppClassLoader checkWorkingDirectory
-WARNING: Your working directory, (C:\Users\Christos\Desktop\udacity_builditbigger\FinalProject) is not equal to your 
-web application root (C:\Users\Christos\Desktop\udacity_builditbigger\FinalProject\backend\build\exploded-backend)
-You will not be able to access files from your working directory on the production server.
-
-Mar 25, 2018 10:25:40 PM com.google.appengine.tools.development.AbstractModule shutdown
-Shutting down.
-INFO: Shutting down module instance default
-Mar 25, 2018 10:25:40 PM com.google.appengine.api.datastore.dev.LocalDatastoreService cleanupActiveServices
-INFO: scheduler shutting down.
