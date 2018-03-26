@@ -2,8 +2,6 @@ package com.example.jokeactivity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.TextView;
 
 /**
@@ -20,6 +18,7 @@ public class JokeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_joke);
 
         String joke = getIntent().getStringExtra(INTENT_JOKE);
+        if (joke.isEmpty() || joke == null) return;
         TextView textViewJoke = findViewById(R.id.joke_view);
         textViewJoke.setText(joke);
     }
